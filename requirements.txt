@@ -1,0 +1,7 @@
+# Requirements for the plugin
+openslides==1.4a1
+
+# Requirements for development
+django-discover-runner==0.4
+Fabric==1.6.0
+pep8==1.4.5

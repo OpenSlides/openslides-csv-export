@@ -1,20 +1,13 @@
-# General
+# Patterns to be ignored by git
+
+# Virtual environment for Python
+.venv/
+
+# Python compiled files
 *.pyc
-*.swp
-*~
-
-# Virtual Environment
-.venv/*
-
 
 # Package building
-docs/_build/*
 *.egg-info
-build/*
-dist/*
-.DS_Store
+build/
+dist/
 versiontools*
-
-# Unit test and coverage reports
-.coverage
-htmlcov

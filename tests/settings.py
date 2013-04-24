@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import openslides.main
+from openslides.global_settings import *
+
+# Use 'DEBUG = True' to get more details for server errors
+# (Default for releases: 'False')
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+DBPATH = ''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': DBPATH,
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+
+# Set timezone
+TIME_ZONE = 'Europe/Berlin'
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = 'secred'
+
+# Add OpenSlides plugins to this list (see example entry in comment)
+INSTALLED_PLUGINS = (
+    'openslides_csv_export',
+)
+
+INSTALLED_APPS += INSTALLED_PLUGINS
+
+# Absolute path to the directory that holds media.
+# Example: "/home/media/media.lawrence.com/"
+MEDIA_ROOT = ''
+
+# New top level setting for django-discover-runner
+# https://github.com/jezdez/django-discover-runner
+import os
+TEST_DISCOVER_TOP_LEVEL = os.path.dirname(os.path.dirname(__file__))
