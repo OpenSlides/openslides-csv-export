@@ -23,12 +23,16 @@ class CSVExportView(PermissionMixin, View):
         response = HttpResponse()
         response['Content-Disposition'] = 'attachment; filename=list_of_speakers.csv;'
         csv_writer = csv.writer(response)
-        csv_writer.writerow(['Item', 'Person', 'Time'])
-        for speaker in Speaker.objects.all().order_by('item', 'weight', 'time'):
+        csv_writer.writerow(['Item', 'Person', 'Begin Time', 'End Time'])
+        for speaker in Speaker.objects.all().order_by('item', 'weight', 'begin_time'):
             try:
-                time = speaker.time.strftime('%d.%m.%Y %H:%M:%S')
+                begin_time = speaker.begin_time.strftime('%d.%m.%Y %H:%M:%S')
             except AttributeError:
-                time = None
+                begin_time = None
+            try:
+                end_time = speaker.end_time.strftime('%d.%m.%Y %H:%M:%S')
+            except AttributeError:
+                end_time = None
             csv_writer.writerow([
-                speaker.item.title.encode('utf8'), unicode(speaker.person).encode('utf8'), time])
+                speaker.item.title.encode('utf8'), unicode(speaker.person).encode('utf8'), begin_time, end_time])
         return response

@@ -5,6 +5,7 @@ Unit tests.
 """
 
 import datetime
+import time
 
 from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
@@ -32,7 +33,7 @@ class CSVExportView(TestCase):
 
     def test_get_manager(self):
         response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
-        self.assertContains(response, 'Item,Person,Time', status_code=200)
+        self.assertContains(response, 'Item,Person,Begin Time,End Time', status_code=200)
 
     def test_get_normal_user(self):
         response = self.client_2.get('/openslides_csv_export/lists_of_speakers/')
@@ -43,7 +44,12 @@ class CSVExportView(TestCase):
         speaker1 = Speaker.objects.add(self.manager, item1)
         response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
         self.assertContains(response, 'Iangohse5pae7eineeca,AhxahShahGeb7eith8ua,', status_code=200)
-        speaker1.speak()
+        speaker1.begin_speach()
         response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
         text = 'Iangohse5pae7eineeca,AhxahShahGeb7eith8ua,%s' % datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S')
+        self.assertContains(response, text, status_code=200)
+        time.sleep(1)
+        speaker1.end_speach()
+        response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
+        text = '%s,%s' % (text, datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S'))
         self.assertContains(response, text, status_code=200)

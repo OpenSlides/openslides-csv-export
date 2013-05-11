@@ -1,5 +1,5 @@
 # Requirements for the plugin
-openslides==1.4a1
+openslides==1.4
 
 # Requirements for development
 django-discover-runner==0.4

@@ -4,8 +4,7 @@
 Setup script for the CSV Export Plugin for OpenSlides.
 """
 
-from setuptools import setup
-from setuptools import find_packages
+from setuptools import setup, find_packages
 
 from openslides_csv_export import VERSION
 
@@ -17,14 +16,19 @@ with open('README.txt') as readme:
 setup(
     name='openslides-csv-export',
     version=VERSION,
+    description='CSV Export Plugin for OpenSlides',
+    long_description=long_description,
     author='OpenSlides-Team, see AUTHORS',  # TODO: Check this.
     author_email='support@openslides.org',  # TODO: Check this.
     url='http://openslides.org',
-    description='CSV Export Plugin for OpenSlides',
-    long_description=long_description,
-    #classifiers=[],  # TODO: Complete this.
+    packages=find_packages(exclude=['tests']),
+    classifiers=[
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 2'],
     license='MIT',
-    packages=find_packages(),
-    include_package_data=True,
-    setup_requires=['versiontools >= 1.6'],
-    install_requires=['openslides'])
+    install_requires='openslides== 1.4')
+
+

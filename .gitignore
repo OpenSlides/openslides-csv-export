@@ -10,4 +10,3 @@
 *.egg-info
 build/
 dist/
-versiontools*
