@@ -53,3 +53,9 @@ class CSVExportView(TestCase):
         response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
         text = '%s,%s' % (text, datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S'))
         self.assertContains(response, text, status_code=200)
+
+    def test_tab(self):
+        response = self.client_1.get('/projector/dashboard/')
+        self.assertContains(response, 'CSV Export', status_code=200)
+        response = self.client_2.get('/projector/dashboard/')
+        self.assertNotContains(response, 'CSV Export', status_code=200)
