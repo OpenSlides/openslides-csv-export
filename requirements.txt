@@ -1,7 +1,7 @@
-# Requirements for the plugin
-openslides==1.4
+# Requirements for the plugin in production
+-r requirements_production.txt
 
-# Requirements for development
+# Requirements for development and tests
 django-discover-runner==0.4
 Fabric==1.6.0
 pep8==1.4.5

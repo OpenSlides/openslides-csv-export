@@ -13,6 +13,10 @@ with open('README.txt') as readme:
     long_description = readme.read()
 
 
+with open('requirements_production.txt') as requirements_production:
+    install_requires = requirements_production.readlines()
+
+
 setup(
     name=NAME,
     version=VERSION,
@@ -21,7 +25,6 @@ setup(
     author='OpenSlides-Team, see AUTHORS',  # TODO: Check this.
     author_email='support@openslides.org',  # TODO: Check this.
     url='http://openslides.org',
-    packages=find_packages(exclude=['tests']),
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
@@ -29,4 +32,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 2'],
     license='MIT',
-    install_requires='openslides==1.4')
+    packages=find_packages(exclude=['tests']),
+    include_package_data=True,
+    install_requires=install_requires)

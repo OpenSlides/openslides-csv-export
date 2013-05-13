@@ -1,2 +1,8 @@
 include AUTHORS
 include LICENSE
+include README.txt
+include requirements_production.txt
+recursive-include openslides *.*
+recursive-exclude openslides *.pyc
+recursive-exclude openslides *.swp
+recursive-exclude openslides *~
