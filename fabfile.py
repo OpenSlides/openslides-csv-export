@@ -52,3 +52,11 @@ def prepare_commit():
     """
     test()
     pep8()
+
+
+def travis_ci():
+    """
+    Command that is run by Travis CI.
+    """
+    test()
+    pep8()
