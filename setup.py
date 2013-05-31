@@ -22,8 +22,8 @@ setup(
     version=VERSION,
     description=DESCRIPTION,
     long_description=long_description,
-    author='OpenSlides-Team, see AUTHORS',  # TODO: Check this.
-    author_email='support@openslides.org',  # TODO: Check this.
+    author='OpenSlides-Team, see AUTHORS',
+    author_email='support@openslides.org',
     url='http://openslides.org',
     classifiers=[
         'Environment :: Web Environment',
