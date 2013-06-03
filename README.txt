@@ -9,7 +9,7 @@ as an example how to write plugins for OpenSlides.
 Requirements
 ============
 
-OpenSlides 1.4 (http://openslides.org)
+OpenSlides 1.4 (unreleased) (http://openslides.org)
 
 
 Install
