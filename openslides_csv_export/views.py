@@ -47,6 +47,7 @@ def register_tab(request):
     return Tab(
         title='CSV Export',
         app='openslides_csv_export',
+        stylefile='styles/openslides_csv_export.css',
         url=reverse('csv_export_list_of_speakers'),
         permission=request.user.has_perm('agenda.can_manage_agenda'),
         selected=request.path.startswith('/openslides_csv_export/'))
