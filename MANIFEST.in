@@ -1,6 +1,6 @@
 include AUTHORS
 include LICENSE
-include README.txt
+include README.rst
 include requirements_production.txt
 recursive-include openslides_csv_export *.*
 recursive-exclude openslides_csv_export *.pyc

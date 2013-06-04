@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 from openslides_csv_export import NAME, VERSION, DESCRIPTION
 
 
-with open('README.txt') as readme:
+with open('README.rst') as readme:
     long_description = readme.read()
 
 
