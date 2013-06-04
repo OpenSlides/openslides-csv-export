@@ -48,7 +48,7 @@ def prepare_commit():
     """
     Does everything that should be done before a commit.
 
-    At the moment it is running the tests and check for PEP 8 errors.
+    At the moment it is running the tests and checks for PEP 8 errors.
     """
     test()
     pep8()
