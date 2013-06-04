@@ -2,7 +2,7 @@
  CSV Export Plugin for OpenSlides
 ==================================
 
-Version 1.0b1 (unreleased)
+Version 1.0b1 (2013-06-04)
 
 This plugin provides a csv export of the lists of speakers. It is also useful
 as an example how to write plugins for OpenSlides.
