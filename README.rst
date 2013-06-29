@@ -2,7 +2,7 @@
  CSV Export Plugin for OpenSlides
 ==================================
 
-Version 1.0c1 (unreleased)
+Version 1.0 (unreleased)
 
 This plugin provides a csv export of the lists of speakers. It is also useful
 as an example how to write plugins for OpenSlides.
@@ -11,15 +11,15 @@ as an example how to write plugins for OpenSlides.
 Requirements
 ============
 
-OpenSlides 1.4b2 (http://openslides.org/)
+OpenSlides 1.4 (http://openslides.org/)
 
 
 Install
 =======
 
-This is only an example instruction for install on GNU/Linux. CSV Export
-Plugin for OpenSlides can also be installed as any other python package,
-e. g. on Windows.
+This is only an example instruction for install CSV Export Plugin for
+OpenSlides on GNU/Linux. It can also be installed as any other python
+package and on other platforms, e. g. on Windows.
 
 1. Change to a new directory.
 
@@ -33,11 +33,11 @@ e. g. on Windows.
 
     $ source .venv/bin/activate
 
-    $ pip install http://files.openslides.org/Beta/openslides-1.4b2.tar.gz
+    $ pip install openslides==1.4  # or http://files.openslides.org/openslides-1.4.tar.gz
 
 3. Install the CSV Export Plugin for OpenSlides from http://openslides.org/.
 
-    $ pip install http://files.openslides.org/plugins/openslides-csv-export/openslides-csv-export-1.0c1.tar.gz
+    $ pip install openslides-csv-export  # or http://files.openslides.org/plugins/openslides-csv-export/openslides-csv-export-1.0.tar.gz
 
 4. Start OpenSlides once to create its settings file if it does not exist yet.
 
