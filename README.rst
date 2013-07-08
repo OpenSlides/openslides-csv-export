@@ -38,7 +38,7 @@ Setup and activate a virtual environment and install OpenSlides in it::
 
     $ pip install openslides==1.4  # or http://files.openslides.org/openslides-1.4.tar.gz
 
-Install the CSV Export Plugin for OpenSlides from http://openslides.org/::
+Install CSV Export Plugin for OpenSlides from http://openslides.org/::
 
     $ pip install http://files.openslides.org/plugins/openslides-csv-export/openslides-csv-export-1.0.tar.gz
 
@@ -54,12 +54,13 @@ Stop OpenSlides::
 
     CTRL + C
 
-Edit the settings.py file. You can find it in the directory openslides in
-your user config path given in the environment variable $XDG_CONFIG_HOME.
-Default is ``~/.config/openslides`` on GNU/Linux (and
-``$HOME\AppData\Local\openslides`` on Windows). Insert the line
-'openslides_csv_export' into the INSTALLED_PLUGINS tuple::
+Edit the ``settings.py`` file. You can find it in the directory
+``openslides`` in your user config path given in the environment variable
+``$XDG_CONFIG_HOME``. Default is ``~/.config/openslides/`` on GNU/Linux and
+``$HOME\AppData\Local\openslides\`` on Windows. Insert the line
+``openslides_csv_export,`` into the INSTALLED_PLUGINS tuple::
 
+    # Add OpenSlides plugins to this list
     INSTALLED_PLUGINS = (
         'openslides_csv_export',
     )
