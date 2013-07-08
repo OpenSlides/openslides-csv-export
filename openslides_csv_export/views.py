@@ -5,7 +5,6 @@ Views to export data as csv files.
 """
 
 import csv
-import StringIO
 
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse

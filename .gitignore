@@ -1,6 +1,6 @@
 # Patterns to be ignored by git
 
-# Virtual environment for Python
+# Virtual Python Environment builder
 .venv/
 
 # Python compiled files

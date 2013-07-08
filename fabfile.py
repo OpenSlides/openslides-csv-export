@@ -7,8 +7,6 @@ Fabric file for development use.
 import os
 import sys
 
-from django.core import management
-
 from fabric.api import local
 from fabric.contrib import django
 
@@ -37,6 +35,7 @@ def test(module='tests'):
     """
     Runs the unit tests.
     """
+    from django.core import management
     sys.path.insert(0, '')
     django.settings_module('tests.settings')
     sys.argv.pop()

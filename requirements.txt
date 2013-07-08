@@ -2,6 +2,6 @@
 -r requirements_production.txt
 
 # Requirements for development and tests
-django-discover-runner==0.4
+django-discover-runner==1.0
 Fabric==1.6.1
 pep8==1.4.5
