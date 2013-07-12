@@ -2,6 +2,7 @@
 
 # Virtual Python Environment builder
 .venv/
+.virtualenv/
 
 # Python compiled files
 *.pyc

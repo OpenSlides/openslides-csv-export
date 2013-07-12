@@ -14,7 +14,7 @@ It is also useful as an example how to write plugins for OpenSlides.
 Requirements
 ============
 
-OpenSlides 1.4 (http://openslides.org/)
+OpenSlides 1.4.1 (http://openslides.org/)
 
 
 Install
@@ -36,13 +36,13 @@ Setup and activate a virtual environment and install OpenSlides in it::
 
     $ source .venv/bin/activate
 
-    $ pip install openslides==1.4  # or http://files.openslides.org/openslides-1.4.tar.gz
+    $ pip install openslides==1.4.1  # or http://files.openslides.org/openslides-1.4.1.tar.gz
 
 Install CSV Export Plugin for OpenSlides from http://openslides.org/::
 
     $ pip install http://files.openslides.org/plugins/openslides-csv-export/openslides-csv-export-1.0.1.tar.gz
 
-Instead of the last step you can also just use the Python Package Index (PyPI):: 
+Instead of the last step you can also just use the Python Package Index (PyPI)::
 
     $ pip install openslides-csv-export==1.0.1
 
@@ -68,3 +68,16 @@ Edit the ``settings.py`` file. You can find it in the directory
 Restart OpenSlides::
 
     $ openslides
+
+
+Changelog
+=========
+
+Version 1.0.1 (unreleased)
+--------------------------
+* Update to OpenSlides 1.4.1
+
+
+Version 1.0 (2013-07-11)
+------------------------
+* First release of this plugin.

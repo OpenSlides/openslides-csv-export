@@ -3,5 +3,5 @@
 
 # Requirements for development and tests
 django-discover-runner==1.0
-Fabric==1.6.1
+Fabric==1.7.0
 pep8==1.4.6
