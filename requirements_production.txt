@@ -1,1 +1,1 @@
-openslides==1.4
+openslides==1.4.1

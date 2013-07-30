@@ -25,7 +25,9 @@ setup(
     author='OpenSlides-Team, see AUTHORS',
     author_email='support@openslides.org',
     url='http://openslides.org',
+    keywords='OpenSlides',
     classifiers=[
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
         'License :: OSI Approved :: MIT License',
