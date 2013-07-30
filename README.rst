@@ -2,7 +2,7 @@
  CSV Export Plugin for OpenSlides
 ==================================
 
-Version 1.0.1 (2013-07-30)
+Version 1.0.2 (unreleased)
 
 Overview
 ========
@@ -40,11 +40,11 @@ Setup and activate a virtual environment and install OpenSlides in it::
 
 Install CSV Export Plugin for OpenSlides from http://openslides.org/::
 
-    $ pip install http://files.openslides.org/plugins/openslides-csv-export/openslides-csv-export-1.0.1.tar.gz
+    $ pip install http://files.openslides.org/plugins/openslides-csv-export/openslides-csv-export-1.0.2.tar.gz
 
 Instead of the last step you can also just use the Python Package Index (PyPI)::
 
-    $ pip install openslides-csv-export==1.0.1
+    $ pip install openslides-csv-export==1.0.2
 
 Start OpenSlides once to create its settings file if it does not exist yet::
 
@@ -72,6 +72,10 @@ Restart OpenSlides::
 
 Changelog
 =========
+
+Version 1.0.2 (unreleased)
+--------------------------
+
 
 Version 1.0.1 (2013-07-30)
 --------------------------
