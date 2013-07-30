@@ -2,7 +2,7 @@
  CSV Export Plugin for OpenSlides
 ==================================
 
-Version 1.0.1 (unreleased)
+Version 1.0.1 (2013-07-30)
 
 Overview
 ========
@@ -73,7 +73,7 @@ Restart OpenSlides::
 Changelog
 =========
 
-Version 1.0.1 (unreleased)
+Version 1.0.1 (2013-07-30)
 --------------------------
 * Update to OpenSlides 1.4.1
 
