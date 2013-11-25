@@ -1,20 +1,18 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#
+# Settings file for OpenSlides
+#
 
-import openslides.main
-from openslides.global_settings import *
+from openslides.global_settings import *  # noqa
 
-# Use 'DEBUG = True' to get more details for server errors
-# (Default for releases: 'False')
+# Use 'DEBUG = True' to get more details for server errors. Default for releases: False
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
-DBPATH = ''
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': DBPATH,
+        'NAME': '',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -39,7 +37,11 @@ INSTALLED_APPS += INSTALLED_PLUGINS
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = ''
 
-# New top level setting for django-discover-runner
-# https://github.com/jezdez/django-discover-runner
-import os
-TEST_DISCOVER_TOP_LEVEL = os.path.dirname(os.path.dirname(__file__))
+# Path to Whoosh search index
+# Use RAM storage
+HAYSTACK_CONNECTIONS['default']['STORAGE'] = 'ram'
+
+# Use a faster passwort hasher
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.MD5PasswordHasher',
+)

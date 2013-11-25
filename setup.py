@@ -1,10 +1,6 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-Setup script for CSV Export Plugin for OpenSlides.
-"""
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 from openslides_csv_export import NAME, VERSION, DESCRIPTION
 
