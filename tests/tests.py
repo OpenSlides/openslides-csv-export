@@ -1,8 +1,4 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-Unit tests.
-"""
 
 import datetime
 import time

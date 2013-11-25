@@ -1,8 +1,4 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-Views to export data as csv files.
-"""
 
 import csv
 

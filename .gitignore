@@ -7,6 +7,12 @@
 # Python compiled files
 *.pyc
 
+# Development user data (settings, database, media, search index)
+settings.py
+database.sqlite
+media/
+whoosh_index/
+
 # Package building
 *.egg-info
 build/
