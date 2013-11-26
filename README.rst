@@ -67,7 +67,7 @@ Restart OpenSlides::
 Changelog
 =========
 
-Version 1.0.2 (unreleased)
+Version 1.0.2 (2013-11-26)
 --------------------------
 * Update to OpenSlides 1.5.x
 
