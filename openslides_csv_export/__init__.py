@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 NAME = 'openslides-csv-export'
-VERSION = '1.0.2-dev'
+VERSION = '1.0.3-dev'
 DESCRIPTION = 'CSV Export Plugin for OpenSlides'
 
 
