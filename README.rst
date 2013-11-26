@@ -34,7 +34,7 @@ Setup and activate a virtual environment and install OpenSlides in it::
 
     $ source .virtualenv/bin/activate
 
-    $ pip install openslides>=1.5,<1.6  # or http://files.openslides.org/releases/1.5/openslides-1.5.tar.gz
+    $ pip install "openslides>=1.5,<1.6"  # or http://files.openslides.org/releases/1.5/openslides-1.5.tar.gz
 
 Install CSV Export Plugin for OpenSlides from the Python Package Index (PyPI)::
 
