@@ -1,8 +1,3 @@
-include AUTHORS
-include LICENSE
-include README.rst
-include requirements_production.txt
-recursive-include openslides_csv_export *.*
+include AUTHORS LICENSE README.rst requirements.txt
+graft openslides_csv_export
 recursive-exclude openslides_csv_export *.pyc
-recursive-exclude openslides_csv_export *.swp
-recursive-exclude openslides_csv_export *~

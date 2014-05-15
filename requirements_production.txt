@@ -1,2 +1,0 @@
-# Requirements for CSV Export Plugin for OpenSlides in production
-openslides>=1.6a1,<1.7

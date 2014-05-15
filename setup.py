@@ -2,23 +2,24 @@
 
 from setuptools import find_packages, setup
 
+package_name = 'openslides-csv-export'
 module_name = 'openslides_csv_export'
 
 # The following commented unique string is used to detect this import.
-module = __import__(module_name)  # DaM2jee2el7ziech5Shi8bin5fohjee6aimuJae7
+module = __import__(module_name)  # EiC5Kee6ohp7aesae3yai3fe3soo2uzoshohk2uj
 
 with open('README.rst') as readme:
     long_description = readme.read()
 
-with open('requirements_production.txt') as requirements_production:
-    install_requires = requirements_production.readlines()
+with open('requirements.txt') as requirements:
+    install_requires = requirements.readlines()
 
 setup(
-    name='openslides-csv-export',
+    name=package_name,
     version=module.__version__,
     description=module.__verbose_name__,
     long_description=long_description,
-    author='OpenSlides-Team, see AUTHORS',
+    author='OpenSlides Team, see AUTHORS',
     author_email='support@openslides.org',
     url='http://openslides.org/',
     keywords='OpenSlides',

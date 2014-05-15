@@ -3,5 +3,9 @@ python:
   - "2.6"
   - "2.7"
 install:
-  - "pip install -r requirements.txt --use-mirrors"
-script: "fab travis_ci"
+  - "pip install http://files.openslides.org/releases/1.6b1/openslides-1.6b1.tar.gz"
+  - "pip install -r requirements.txt"
+  - "pip install flake8==2.1.0"
+script:
+  - "PYTHONPATH=$PYTHONPATH DJANGO_SETTINGS_MODULE=tests.settings openslides django test"
+  - "flake8 --max-line-length=150 openslides_csv_export tests"
