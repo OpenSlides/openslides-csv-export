@@ -30,5 +30,5 @@ class CSVExportView(PermissionMixin, View):
             except AttributeError:
                 end_time = None
             csv_writer.writerow([
-                speaker.item.title.encode('utf8'), unicode(speaker.person).encode('utf8'), begin_time, end_time])
+                speaker.item.get_title().encode('utf8'), unicode(speaker.person).encode('utf8'), begin_time, end_time])
         return response

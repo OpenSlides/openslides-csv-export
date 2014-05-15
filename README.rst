@@ -60,6 +60,7 @@ Changelog
 Version 1.1.0 (unreleased)
 --------------------------
 * Updated to new plugin api and to other api changes of OpenSlides 1.6.
+* Fixed bug when using related agenda items.
 
 
 Version 1.0.2 (2013-11-26)
