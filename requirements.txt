@@ -1,6 +1,1 @@
-# Requirements for CSV Export Plugin for OpenSlides in production
--r requirements_production.txt
-
-# Requirements for development and tests in alphabetical order
-Fabric==1.8.0
-flake8==2.1.0
+openslides>=1.6b2,<1.7

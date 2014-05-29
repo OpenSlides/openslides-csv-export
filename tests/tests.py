@@ -28,30 +28,30 @@ class CSVExportView(TestCase):
         self.client_2.login(username='Theithooxa9no0ahgae0', password='Ohai4aeyo7can1fahzat')
 
     def test_get_manager(self):
-        response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
+        response = self.client_1.get('/csv_export_lists_of_speakers/')
         self.assertContains(response, 'Item,Person,Begin Time,End Time', status_code=200)
 
     def test_get_normal_user(self):
-        response = self.client_2.get('/openslides_csv_export/lists_of_speakers/')
+        response = self.client_2.get('/csv_export_lists_of_speakers/')
         self.assertEqual(response.status_code, 403)
 
     def test_csv_content(self):
         item1 = Item.objects.create(title='Iangohse5pae7eineeca')
         speaker1 = Speaker.objects.add(self.manager, item1)
-        response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
+        response = self.client_1.get('/csv_export_lists_of_speakers/')
         self.assertContains(response, 'Iangohse5pae7eineeca,AhxahShahGeb7eith8ua,', status_code=200)
         speaker1.begin_speach()
-        response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
+        response = self.client_1.get('/csv_export_lists_of_speakers/')
         text = 'Iangohse5pae7eineeca,AhxahShahGeb7eith8ua,%s' % datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S')
         self.assertContains(response, text, status_code=200)
         time.sleep(1)
         speaker1.end_speach()
-        response = self.client_1.get('/openslides_csv_export/lists_of_speakers/')
+        response = self.client_1.get('/csv_export_lists_of_speakers/')
         text = '%s,%s' % (text, datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S'))
         self.assertContains(response, text, status_code=200)
 
-    def test_tab(self):
-        response = self.client_1.get('/projector/dashboard/')
+    def test_main_menu(self):
+        response = self.client_1.get('/dashboard/')
         self.assertContains(response, 'CSV Export', status_code=200)
-        response = self.client_2.get('/projector/dashboard/')
+        response = self.client_2.get('/dashboard/')
         self.assertNotContains(response, 'CSV Export', status_code=200)
