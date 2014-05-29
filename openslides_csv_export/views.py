@@ -12,8 +12,7 @@ class CSVExportView(PermissionMixin, View):
     """
     View to export the lists of speakers of all agenda items as csv.
     """
-    # required_permission = 'agenda.can_manage_agenda'
-    permission_required = 'agenda.can_manage_agenda'  # TODO: Remove this after OpenSlides 1.6b2 release
+    required_permission = 'agenda.can_manage_agenda'
 
     def get(self, request, *args, **kwargs):
         response = HttpResponse()

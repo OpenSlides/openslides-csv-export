@@ -6,7 +6,7 @@ package_name = 'openslides-csv-export'
 module_name = 'openslides_csv_export'
 
 # The following commented unique string is used to detect this import.
-module = __import__(module_name)  # EiC5Kee6ohp7aesae3yai3fe3soo2uzoshohk2uj
+module = __import__(module_name)  # EuC5Kee6ohp7aesae3yai3fe3soo2uzoshohk2uj
 
 with open('README.rst') as readme:
     long_description = readme.read()

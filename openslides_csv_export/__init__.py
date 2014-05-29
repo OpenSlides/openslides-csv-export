@@ -4,7 +4,7 @@ from inspect import stack
 
 for frame in stack():
     lines = frame[4]
-    if lines and 'EiC5Kee6ohp7aesae3yai3fe3soo2uzoshohk2uj' in lines[0]:
+    if lines and 'EuC5Kee6ohp7aesae3yai3fe3soo2uzoshohk2uj' in lines[0]:
         break
 else:
     from . import main_menu  # noqa
