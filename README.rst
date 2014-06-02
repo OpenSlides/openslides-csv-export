@@ -40,7 +40,7 @@ Setup and activate a virtual environment and install OpenSlides in it::
 
 Install CSV Export Plugin for OpenSlides from the Python Package Index (PyPI)::
 
-    $ pip install openslides-csv-export==1.1.0
+    $ pip install openslides-csv-export
 
 Start OpenSlides::
 
@@ -57,7 +57,7 @@ MIT License, see LICENSE file. The authors are mentioned in the AUTHORS file.
 Changelog
 =========
 
-Version 1.1.0 (unreleased)
+Version 1.1.0 (2014-06-02)
 --------------------------
 * Updated to new plugin api and to other api changes of OpenSlides 1.6.
 * Fixed bug when using related agenda items.
