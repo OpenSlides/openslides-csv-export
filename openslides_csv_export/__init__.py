@@ -12,4 +12,4 @@ else:
 
 __verbose_name__ = 'CSV Export Plugin for OpenSlides'
 __description__ = 'This plugin for OpenSlides provides a csv export of the lists of speakers.'
-__version__ = '1.1.0'
+__version__ = '1.1.0-post'

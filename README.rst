@@ -57,6 +57,10 @@ MIT License, see LICENSE file. The authors are mentioned in the AUTHORS file.
 Changelog
 =========
 
+Next Version (unreleased)
+-------------------------
+
+
 Version 1.1.0 (2014-06-02)
 --------------------------
 * Updated to new plugin api and to other api changes of OpenSlides 1.6.
