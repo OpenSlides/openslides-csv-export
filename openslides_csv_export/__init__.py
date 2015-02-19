@@ -10,6 +10,6 @@ else:
     from . import main_menu  # noqa
     from .urls import urlpatterns  # noqa
 
-__verbose_name__ = 'CSV Export Plugin for OpenSlides'
+__verbose_name__ = 'OpenSlides CSV Export Plugin'
 __description__ = 'This plugin for OpenSlides provides a csv export of the lists of speakers.'
-__version__ = '1.1.0'
+__version__ = '1.1.1'
