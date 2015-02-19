@@ -12,7 +12,7 @@ It is also useful as an example how to write plugins for OpenSlides.
 Requirements
 ============
 
-OpenSlides 1.6.x (http://openslides.org/)
+OpenSlides 1.7.x (http://openslides.org/)
 
 
 Install
@@ -37,7 +37,7 @@ plugin in it::
 
     $ source .virtualenv/bin/activate
 
-    $ pip install "openslides>=1.6,<1.7" openslides-csv-export
+    $ pip install "openslides>=1.7,<1.8" openslides-csv-export
 
 Start OpenSlides::
 
@@ -56,6 +56,7 @@ Changelog
 
 Next Version (unreleased)
 -------------------------
+* Updated to OpenSlides 1.7.x.
 
 
 Version 1.1.0 (2014-06-02)

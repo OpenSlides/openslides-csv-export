@@ -4,7 +4,7 @@ python:
   - "2.7"
 install:
   - "pip install -r requirements.txt"
-  - "pip install flake8==2.1.0"
+  - "pip install flake8==2.3.0"
 script:
   - "PYTHONPATH=$PYTHONPATH DJANGO_SETTINGS_MODULE=tests.settings openslides django test"
   - "flake8 --max-line-length=150 openslides_csv_export tests"
