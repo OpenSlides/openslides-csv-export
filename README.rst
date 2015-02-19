@@ -56,6 +56,10 @@ Changelog
 
 Next Version (unreleased)
 -------------------------
+
+
+Version 1.1.1 (2015-02-19)
+--------------------------
 * Updated to OpenSlides 1.7.x.
 
 
