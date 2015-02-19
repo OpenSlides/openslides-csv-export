@@ -4,7 +4,6 @@ from django.conf.urls import patterns, url
 
 from . import views
 
-
 urlpatterns = patterns(
     '',
     url(r'^csv_export_lists_of_speakers/$',

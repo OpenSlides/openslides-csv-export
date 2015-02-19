@@ -3,9 +3,8 @@
 import csv
 
 from django.http import HttpResponse
-
 from openslides.agenda.models import Speaker
-from openslides.utils.views import View, PermissionMixin
+from openslides.utils.views import PermissionMixin, View
 
 
 class CSVExportView(PermissionMixin, View):

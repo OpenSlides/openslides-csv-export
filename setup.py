@@ -19,7 +19,7 @@ setup(
     version=module.__version__,
     description=module.__verbose_name__,
     long_description=long_description,
-    author='OpenSlides Team, see AUTHORS',
+    author='Authors of %s, see AUTHORS' % module.__verbose_name__,
     author_email='support@openslides.org',
     url='http://openslides.org/',
     keywords='OpenSlides',

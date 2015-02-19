@@ -5,7 +5,7 @@ from openslides.utils.main_menu import MainMenuEntry
 
 class CSVExportPluginMainMenuEntry(MainMenuEntry):
     """
-    Main menu entry for the CSV Export Plugin for OpenSlides.
+    Main menu entry for OpenSlides CSV Export Plugin.
     """
     verbose_name = 'CSV Export'
     required_permission = 'agenda.can_manage_agenda'
