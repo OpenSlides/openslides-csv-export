@@ -54,8 +54,8 @@ MIT License, see LICENSE file. The authors are mentioned in the AUTHORS file.
 Changelog
 =========
 
-Next Version (unreleased)
--------------------------
+Version 1.1.1 (unreleased)
+--------------------------
 * Updated to OpenSlides 1.7.x.
 
 
