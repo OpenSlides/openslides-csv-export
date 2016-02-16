@@ -1,10 +1,17 @@
 language: python
+sudo: false
+cache:
+  directories:
+    - $HOME/virtualenv/python$TRAVIS_PYTHON_VERSION/lib/python$TRAVIS_PYTHON_VERSION/site-packages/
+    - $HOME/virtualenv/python$TRAVIS_PYTHON_VERSION/bin/
 python:
-  - "2.6"
-  - "2.7"
+  - "3.4"
+  - "3.5"
 install:
-  - "pip install -r requirements.txt"
-  - "pip install flake8==2.3.0"
+  - "pip install --upgrade --requirement requirements.txt"
+  - "pip install flake8==2.5.4 isort==4.2.2"
 script:
-  - "PYTHONPATH=$PYTHONPATH DJANGO_SETTINGS_MODULE=tests.settings openslides django test"
-  - "flake8 --max-line-length=150 openslides_csv_export tests"
+  - "flake8 openslides_csv_export tests"
+  - "isort --check-only --recursive openslides_csv_export tests"
+
+  - "PYTHONPATH=.:$PYTHONPATH DJANGO_SETTINGS_MODULE='tests.settings' openslides test"
