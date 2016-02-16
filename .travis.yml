@@ -8,6 +8,7 @@ python:
   - "3.4"
   - "3.5"
 install:
+  - "pip install http://files.openslides.org/releases/2.0b4/openslides-2.0b4.tar.gz"
   - "pip install --upgrade --requirement requirements.txt"
   - "pip install flake8==2.5.4 isort==4.2.2"
 script:
