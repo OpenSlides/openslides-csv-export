@@ -12,14 +12,14 @@ It is also useful as an example how to write plugins for OpenSlides.
 Requirements
 ============
 
-OpenSlides 1.7.x (http://openslides.org/)
+OpenSlides 2.0.x (http://openslides.org/)
 
 
 Install
 =======
 
 This is only an example instruction to install the plugin on GNU/Linux. It
-can also be installed as any other python package and on other platforms,
+can also be installed as any other Python package and on other platforms,
 e. g. on Windows.
 
 Change to a new directory::
@@ -33,11 +33,11 @@ Change to a new directory::
 Setup and activate a virtual environment and install OpenSlides and the
 plugin in it::
 
-    $ virtualenv .virtualenv
+    $ python3 -m venv .virtualenv
 
     $ source .virtualenv/bin/activate
 
-    $ pip install "openslides>=1.7,<1.8" openslides-csv-export
+    $ pip install "openslides>=2.0,<2.1" openslides-csv-export
 
 Start OpenSlides::
 
@@ -56,6 +56,7 @@ Changelog
 
 Next Version (unreleased)
 -------------------------
+* Updated to OpenSlides 2.0. Dropped support for OpenSlides 1.x.
 
 
 Version 1.1.1 (2015-02-19)

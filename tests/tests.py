@@ -1,14 +1,9 @@
-# -*- coding: utf-8 -*-
-
 import datetime
 import time
 
-from django.contrib.auth.models import Permission
-from django.contrib.contenttypes.models import ContentType
-from django.test.client import Client
-
-from openslides.agenda.models import Item, Speaker
-from openslides.participant.models import User
+from django.contrib.auth import get_user_model
+from openslides.agenda.models import Speaker
+from openslides.core.models import CustomSlide
 from openslides.utils.test import TestCase
 
 
@@ -17,41 +12,31 @@ class CSVExportView(TestCase):
     Tests the export view and its output, the csv file.
     """
     def setUp(self):
-        ct = ContentType.objects.get(app_label='agenda', model='item')
-        perm = Permission.objects.get(content_type=ct, codename='can_manage_agenda')
-        self.manager = User.objects.create_user(username='AhxahShahGeb7eith8ua', password='Theithooxa9no0ahgae0')
-        self.manager.user_permissions.add(perm)
-        self.normal_user = User.objects.create_user(username='Theithooxa9no0ahgae0', password='Ohai4aeyo7can1fahzat')
-        self.client_1 = Client()
-        self.client_1.login(username='AhxahShahGeb7eith8ua', password='Theithooxa9no0ahgae0')
-        self.client_2 = Client()
-        self.client_2.login(username='Theithooxa9no0ahgae0', password='Ohai4aeyo7can1fahzat')
+        self.admin = get_user_model().objects.get(username='admin')
+        self.client.login(username='admin', password='admin')
 
     def test_get_manager(self):
-        response = self.client_1.get('/csv_export_lists_of_speakers/')
+        response = self.client.get('/csv_export_lists_of_speakers/')
         self.assertContains(response, 'Item,Person,Begin Time,End Time', status_code=200)
 
     def test_get_normal_user(self):
-        response = self.client_2.get('/csv_export_lists_of_speakers/')
+        self.client.logout()
+        response = self.client.get('/csv_export_lists_of_speakers/')
         self.assertEqual(response.status_code, 403)
 
     def test_csv_content(self):
-        item1 = Item.objects.create(title='Iangohse5pae7eineeca')
-        speaker1 = Speaker.objects.add(self.manager, item1)
-        response = self.client_1.get('/csv_export_lists_of_speakers/')
-        self.assertContains(response, 'Iangohse5pae7eineeca,AhxahShahGeb7eith8ua,', status_code=200)
-        speaker1.begin_speach()
-        response = self.client_1.get('/csv_export_lists_of_speakers/')
-        text = 'Iangohse5pae7eineeca,AhxahShahGeb7eith8ua,%s' % datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S')
+        customslide = CustomSlide.objects.create(title='Iangohse5pae7eineeca')
+        speaker1 = Speaker.objects.add(self.admin, customslide.agenda_item)
+        response = self.client.get('/csv_export_lists_of_speakers/')
+        self.assertContains(response, 'Iangohse5pae7eineeca,{},'.format(str(self.admin)), status_code=200)
+        speaker1.begin_speech()
+        response = self.client.get('/csv_export_lists_of_speakers/')
+        text = 'Iangohse5pae7eineeca,{},{}'.format(
+            str(self.admin),
+            datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S'))
         self.assertContains(response, text, status_code=200)
         time.sleep(1)
-        speaker1.end_speach()
-        response = self.client_1.get('/csv_export_lists_of_speakers/')
-        text = '%s,%s' % (text, datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S'))
+        speaker1.end_speech()
+        response = self.client.get('/csv_export_lists_of_speakers/')
+        text = ','.join((text, datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S')))
         self.assertContains(response, text, status_code=200)
-
-    def test_main_menu(self):
-        response = self.client_1.get('/dashboard/')
-        self.assertContains(response, 'CSV Export', status_code=200)
-        response = self.client_2.get('/dashboard/')
-        self.assertNotContains(response, 'CSV Export', status_code=200)
