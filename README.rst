@@ -54,7 +54,7 @@ MIT License, see LICENSE file. The authors are mentioned in the AUTHORS file.
 Changelog
 =========
 
-Version 2.0.0 (unreleased)
+Version 2.0.0 (2016-04-23)
 --------------------------
 * Updated to OpenSlides 2.0. Dropped support for OpenSlides 1.x.
 
