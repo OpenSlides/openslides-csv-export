@@ -56,6 +56,10 @@ Changelog
 
 Next Version (unreleased)
 -------------------------
+
+
+Version 2.0.0 (2016-04-23)
+--------------------------
 * Updated to OpenSlides 2.0. Dropped support for OpenSlides 1.x.
 
 
