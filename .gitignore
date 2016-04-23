@@ -7,8 +7,8 @@ __pycache__/
 .virtualenv/
 .venv/
 
-# Development user data (settings, database, media, search index)
-development/*
+# Local user data (settings, database, media, search index, static files)
+personal_data/*
 
 # Package building
 *.egg-info

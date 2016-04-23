@@ -15,7 +15,8 @@ class CSVExportAppConfig(AppConfig):
         'js/openslides_csv_export/site.js']
 
     def ready(self):
-        # Add urlpatters to application configuration.
+        # Add plugin urlpatters to application configuration so OpenSlides
+        # can find it.
         from .urls import urlpatterns
 
         self.urlpatterns = urlpatterns
