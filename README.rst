@@ -5,14 +5,14 @@
 Overview
 ========
 
-This plugin for OpenSlides provides a csv export of the lists of speakers.
+This plugin for OpenSlides provides a CSV export of the lists of speakers.
 It is also useful as an example how to write plugins for OpenSlides.
 
 
 Requirements
 ============
 
-OpenSlides 2.0.x (http://openslides.org/)
+OpenSlides 2.0.x (https://openslides.org/)
 
 
 Install
