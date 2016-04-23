@@ -18,7 +18,7 @@ setup(
     description=module.__verbose_name__,
     license='MIT',
     long_description=long_description,
-    url='http://openslides.org/',
+    url='https://openslides.org/',
     version=module.__version__,
 
     keywords='OpenSlides',
