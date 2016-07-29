@@ -56,6 +56,7 @@ Changelog
 
 Next Version (unreleased)
 -------------------------
+* Added example how to use states and templates.
 
 
 Version 2.0.0 (2016-04-23)
