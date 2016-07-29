@@ -1,9 +1,9 @@
-import datetime
 import time
 
 from django.contrib.auth import get_user_model
+from django.utils import timezone
 from openslides.agenda.models import Speaker
-from openslides.core.models import CustomSlide
+from openslides.topics.models import Topic
 from openslides.utils.test import TestCase
 
 
@@ -25,18 +25,18 @@ class CSVExportView(TestCase):
         self.assertEqual(response.status_code, 403)
 
     def test_csv_content(self):
-        customslide = CustomSlide.objects.create(title='Iangohse5pae7eineeca')
-        speaker1 = Speaker.objects.add(self.admin, customslide.agenda_item)
+        topic = Topic.objects.create(title='Iangohse5pae7eineeca')
+        speaker1 = Speaker.objects.add(self.admin, topic.agenda_item)
         response = self.client.get('/csv_export_lists_of_speakers/')
         self.assertContains(response, 'Iangohse5pae7eineeca,{},'.format(str(self.admin)), status_code=200)
         speaker1.begin_speech()
         response = self.client.get('/csv_export_lists_of_speakers/')
         text = 'Iangohse5pae7eineeca,{},{}'.format(
             str(self.admin),
-            datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S'))
+            timezone.now().strftime('%d.%m.%Y %H:%M:%S'))
         self.assertContains(response, text, status_code=200)
         time.sleep(1)
         speaker1.end_speech()
         response = self.client.get('/csv_export_lists_of_speakers/')
-        text = ','.join((text, datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S')))
+        text = ','.join((text, timezone.now().strftime('%d.%m.%Y %H:%M:%S')))
         self.assertContains(response, text, status_code=200)

@@ -9,10 +9,11 @@ class CSVExportAppConfig(AppConfig):
     description = __description__
     version = __version__
     angular_site_module = True
-    angular_projector_module = False
+    angular_projector_module = False  # TODO
     js_files = [
-        'js/openslides_csv_export/base.js',
-        'js/openslides_csv_export/site.js']
+        'static/js/openslides_csv_export/base.js',
+        'static/js/openslides_csv_export/site.js',
+    ]
 
     def ready(self):
         # Add plugin urlpatters to application configuration so OpenSlides

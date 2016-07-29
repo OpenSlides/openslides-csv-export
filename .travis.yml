@@ -8,8 +8,10 @@ python:
   - "3.4"
   - "3.5"
 install:
-  - "pip install --upgrade --requirement requirements.txt"
-  - "pip install flake8==2.5.4 isort==4.2.2"
+  - "pip install --upgrade setuptools"
+  - "pip install https://github.com/OpenSlides/OpenSlides/archive/e340d837775ca3853d119a75ebda922baf83c3c3.zip"
+  # - "pip install --upgrade --requirement requirements.txt"
+  - "pip install flake8==3.0.4 isort==4.2.5"
 script:
   - "flake8 openslides_csv_export tests"
   - "isort --check-only --recursive openslides_csv_export tests"
