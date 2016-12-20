@@ -12,7 +12,7 @@ It is also useful as an example how to write plugins for OpenSlides.
 Requirements
 ============
 
-OpenSlides 2.0.x (https://openslides.org/)
+OpenSlides 2.1.x (https://openslides.org/)
 
 
 Install
@@ -37,7 +37,7 @@ plugin in it::
 
     $ source .virtualenv/bin/activate
 
-    $ pip install "openslides>=2.0,<2.1" openslides-csv-export
+    $ pip install "openslides>=2.1,<2.2" openslides-csv-export
 
 Start OpenSlides::
 
@@ -53,6 +53,12 @@ MIT License, see LICENSE file. The authors are mentioned in the AUTHORS file.
 
 Changelog
 =========
+
+Next Version (unreleased)
+-------------------------
+* Updated to OpenSlides 2.1. Dropped support for OpenSlides 2.0.
+* Added example how to use states and templates.
+
 
 Version 2.0.0 (2016-04-23)
 --------------------------
