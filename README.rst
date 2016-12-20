@@ -54,8 +54,8 @@ MIT License, see LICENSE file. The authors are mentioned in the AUTHORS file.
 Changelog
 =========
 
-Next Version (unreleased)
--------------------------
+Version 2.0.1 (2016-12-20)
+--------------------------
 * Updated to OpenSlides 2.1. Dropped support for OpenSlides 2.0.
 * Added example how to use states and templates.
 
