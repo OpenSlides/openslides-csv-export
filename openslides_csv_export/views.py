@@ -3,6 +3,7 @@ import csv
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponse
 from openslides.agenda.models import Speaker
+from openslides.utils.auth import has_perm
 from openslides.utils.views import View
 
 
@@ -11,7 +12,7 @@ class CSVExportView(View):
     View to export the lists of speakers of all agenda items as csv.
     """
     def get(self, request, *args, **kwargs):
-        if not request.user.has_perm('agenda.can_manage'):
+        if not has_perm(request.user, 'agenda.can_manage'):
             raise PermissionDenied
         response = HttpResponse()
         response['Content-Disposition'] = 'attachment; filename=list_of_speakers.csv;'

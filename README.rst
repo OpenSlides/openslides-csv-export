@@ -54,6 +54,11 @@ MIT License, see LICENSE file. The authors are mentioned in the AUTHORS file.
 Changelog
 =========
 
+Version 2.0.2 (unreleased)
+--------------------------
+* Updated OpenSlides 2.1 support (Fixed usage of has_perm()).
+
+
 Version 2.0.1 (2016-12-20)
 --------------------------
 * Updated to OpenSlides 2.1. Dropped support for OpenSlides 2.0.
