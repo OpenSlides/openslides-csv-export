@@ -13,14 +13,12 @@ with open('requirements.txt') as requirements:
 
 setup(
     name=package_name,
+    version=module.__version__,
+    description=module.__verbose_name__,
+    long_description=long_description,
     author='Authors of %s, see AUTHORS' % module.__verbose_name__,
     author_email='support@openslides.org',
-    description=module.__verbose_name__,
-    license='MIT',
-    long_description=long_description,
-    url='https://openslides.org/',
-    version=module.__version__,
-
+    url=module.__url__,
     keywords='OpenSlides',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -29,9 +27,12 @@ setup(
         'Framework :: Django',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
+    license=module.__license__,
     packages=find_packages(exclude=['tests']),
     include_package_data=True,
     install_requires=install_requires,
