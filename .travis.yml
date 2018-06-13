@@ -7,11 +7,12 @@ cache:
 python:
   - "3.4"
   - "3.5"
+  - "3.6"
 install:
-  - "pip install --upgrade setuptools"
-  - "pip install openslides==2.1b3"
-  # - "pip install --upgrade --requirement requirements.txt"
-  - "pip install flake8==3.0.4 isort==4.2.5"
+  - "pip install --upgrade setuptools pip"
+  - "pip install openslides==2.2"
+  - "pip install flake8==3.0.4 isort==4.2.5 mypy fakeredis 'django_redis>=4.7.0,<4.9'"
+  - "pip freeze"
 script:
   - "flake8 openslides_csv_export tests"
   - "isort --check-only --recursive openslides_csv_export tests"
